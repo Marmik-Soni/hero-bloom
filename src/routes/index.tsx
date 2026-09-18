@@ -26,14 +26,14 @@ export const Route = createFileRoute("/")({
 function ArrowDownRight() {
   return (
     <svg
-      width="52"
-      height="52"
+      width="44"
+      height="44"
       viewBox="0 0 52 52"
       fill="none"
       stroke="currentColor"
       strokeWidth="1.5"
       aria-hidden="true"
-      className="h-7 w-7 md:h-10 md:w-10"
+      className="h-8 w-8 md:h-11 md:w-11"
     >
       <path d="M8 8 L44 44" />
       <path d="M44 20 V44 H20" />
@@ -70,38 +70,41 @@ function IslandMenu() {
 
 function Index() {
   return (
-    <div className="relative flex h-dvh flex-col overflow-hidden bg-background px-6 pt-10 text-foreground md:px-16 md:pt-14">
-      {/* Headline — left, compact like the reference */}
-      <h1 className="text-[clamp(2.4rem,10.5vw,7rem)] font-medium uppercase leading-[0.98] tracking-tight md:text-[clamp(3rem,11.5vh,7.5rem)]">
+    <div className="relative flex h-dvh flex-col overflow-hidden bg-background px-6 pt-8 text-foreground md:px-14 md:pt-12">
+      {/* Headline */}
+      <h1 className="text-[clamp(2.1rem,11.5vw,8rem)] font-medium uppercase leading-[0.95] tracking-tight md:text-[clamp(3rem,9.5vh,8rem)]">
         Web Designer
         <br />
         & Developer
       </h1>
 
-      {/* Intro — right column under the headline */}
-      <div className="mt-8 flex justify-end md:mt-12">
-        <p className="max-w-md text-[11px] uppercase leading-[1.7] tracking-[0.06em] md:text-[12.5px]">
-          I'm a passionate web designer & developer, specializing in clean
-          interfaces, modern websites and adaptive web design. I build products
-          that are simple, beautiful and easy to use — and I believe good
-          results come from close collaboration, shared ambition and mutual
-          respect.
-        </p>
-      </div>
+      {/* Intro */}
+      <p
+        className="ml-auto mt-6 max-w-3xl text-[12px] uppercase leading-relaxed tracking-wide md:mt-10 md:text-[13px]"
+        style={{ textIndent: "18%", textAlign: "justify" }}
+      >
+        I'm a passionate web designer & developer, specializing in clean
+        interfaces, modern websites and adaptive web design. I build products
+        that are simple, beautiful and easy to use — and I believe good results
+        come from close collaboration, shared ambition and mutual respect. I
+        create designs that make a positive impact on customers.
+      </p>
 
-      {/* Bottom: portrait + arrow left, oversized name right */}
-      <div className="mt-auto flex items-end justify-between gap-8 pb-24 md:pb-28">
-        <div className="flex min-h-0 flex-col gap-5 md:gap-8">
+      {/* Bottom block: portrait + arrow left, name right */}
+      <div className="mt-auto flex items-end justify-between gap-6 pb-24 md:gap-10 md:pb-28">
+        <div className="flex h-full min-h-0 flex-col justify-between self-stretch">
           <img
             src={portrait}
             alt="Portrait of Marmik Soni"
             width={768}
             height={960}
-            className="w-24 rounded-lg grayscale sm:w-36 md:w-48"
+            className="w-24 rounded-md grayscale sm:w-32 md:w-44"
           />
-          <ArrowDownRight />
+          <div className="mt-auto pt-4 md:pt-8">
+            <ArrowDownRight />
+          </div>
         </div>
-        <h2 className="text-right text-[clamp(2rem,9vw,6rem)] font-medium uppercase leading-[0.98] tracking-tight md:text-[clamp(2.5rem,9.5vh,6.5rem)]">
+        <h2 className="text-right text-[clamp(1.9rem,9.5vw,6rem)] font-medium uppercase leading-[0.95] tracking-tight md:text-[clamp(2.4rem,7.5vh,6rem)]">
           Marmik
           <br />
           Soni
