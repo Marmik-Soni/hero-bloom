@@ -26,13 +26,14 @@ export const Route = createFileRoute("/")({
 function ArrowDownRight() {
   return (
     <svg
-      width="52"
-      height="52"
+      width="44"
+      height="44"
       viewBox="0 0 52 52"
       fill="none"
       stroke="currentColor"
       strokeWidth="1.5"
       aria-hidden="true"
+      className="h-8 w-8 md:h-11 md:w-11"
     >
       <path d="M8 8 L44 44" />
       <path d="M44 20 V44 H20" />
@@ -40,35 +41,38 @@ function ArrowDownRight() {
   );
 }
 
+function IslandMenu() {
+  const linkClass =
+    "rounded-full px-3.5 py-1.5 text-[11px] font-medium uppercase tracking-[0.16em] transition-colors hover:bg-foreground hover:text-background md:px-4 md:py-2 md:text-xs";
+  return (
+    <nav
+      aria-label="Primary"
+      className="fixed bottom-5 left-1/2 z-50 flex -translate-x-1/2 items-center gap-0.5 rounded-full border border-foreground/10 bg-background/70 p-1.5 shadow-[0_8px_32px_-8px_rgba(0,0,0,0.18)] backdrop-blur-xl md:bottom-8 md:gap-1"
+    >
+      <a href="#about" className={linkClass}>
+        About
+      </a>
+      <a href="#projects" className={linkClass}>
+        Projects
+      </a>
+      <a href="#contacts" className={linkClass}>
+        Contacts
+      </a>
+      <a
+        href="mailto:hello@marmiksoni.dev"
+        className="ml-0.5 rounded-full bg-foreground px-3.5 py-1.5 text-[11px] font-medium uppercase tracking-[0.16em] text-background transition-opacity hover:opacity-80 md:ml-1 md:px-4 md:py-2 md:text-xs"
+      >
+        Email
+      </a>
+    </nav>
+  );
+}
+
 function Index() {
   return (
-    <div className="flex min-h-screen flex-col bg-background px-6 pt-8 pb-10 text-foreground md:px-14 md:pt-10">
-      {/* Top bar */}
-      <header className="flex items-center justify-between text-[11px] font-medium uppercase tracking-[0.18em]">
-        <a href="/" className="tracking-[0.24em]">
-          Marmik
-        </a>
-        <nav className="hidden items-center gap-14 md:flex">
-          <a href="#about" className="transition-opacity hover:opacity-50">
-            About me
-          </a>
-          <a href="#projects" className="transition-opacity hover:opacity-50">
-            Projects
-          </a>
-          <a href="#contacts" className="transition-opacity hover:opacity-50">
-            Contacts
-          </a>
-        </nav>
-        <a
-          href="mailto:hello@marmiksoni.dev"
-          className="normal-case tracking-[0.08em] transition-opacity hover:opacity-50"
-        >
-          hello@marmiksoni.dev
-        </a>
-      </header>
-
+    <div className="relative flex h-dvh flex-col overflow-hidden bg-background px-6 pt-8 text-foreground md:px-14 md:pt-12">
       {/* Headline */}
-      <h1 className="mt-16 text-[clamp(3rem,10vw,8.5rem)] font-medium uppercase leading-[0.95] tracking-tight md:mt-24">
+      <h1 className="text-[clamp(2.1rem,11.5vw,8rem)] font-medium uppercase leading-[0.95] tracking-tight md:text-[clamp(3rem,9.5vh,8rem)]">
         Web Designer
         <br />
         & Developer
@@ -76,7 +80,7 @@ function Index() {
 
       {/* Intro */}
       <p
-        className="ml-auto mt-10 max-w-3xl text-[13px] uppercase leading-relaxed tracking-wide md:mt-14"
+        className="ml-auto mt-6 max-w-3xl text-[12px] uppercase leading-relaxed tracking-wide md:mt-10 md:text-[13px]"
         style={{ textIndent: "18%", textAlign: "justify" }}
       >
         I'm a passionate web designer & developer, specializing in clean
@@ -87,25 +91,27 @@ function Index() {
       </p>
 
       {/* Bottom block: portrait + arrow left, name right */}
-      <div className="mt-auto flex items-end justify-between gap-10 pt-16">
-        <div className="flex h-full flex-col justify-between self-stretch">
+      <div className="mt-auto flex items-end justify-between gap-6 pb-24 md:gap-10 md:pb-28">
+        <div className="flex h-full min-h-0 flex-col justify-between self-stretch">
           <img
             src={portrait}
             alt="Portrait of Marmik Soni"
             width={768}
             height={960}
-            className="w-36 rounded-md grayscale md:w-48"
+            className="w-24 rounded-md grayscale sm:w-32 md:w-44"
           />
-          <div className="mt-auto pt-10">
+          <div className="mt-auto pt-4 md:pt-8">
             <ArrowDownRight />
           </div>
         </div>
-        <h2 className="text-right text-[clamp(2.5rem,8vw,6.5rem)] font-medium uppercase leading-[0.95] tracking-tight">
+        <h2 className="text-right text-[clamp(1.9rem,9.5vw,6rem)] font-medium uppercase leading-[0.95] tracking-tight md:text-[clamp(2.4rem,7.5vh,6rem)]">
           Marmik
           <br />
           Soni
         </h2>
       </div>
+
+      <IslandMenu />
     </div>
   );
 }
