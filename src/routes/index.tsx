@@ -72,7 +72,7 @@ function Index() {
   return (
     <div className="relative flex h-dvh flex-col overflow-hidden bg-background px-6 pt-8 text-foreground md:px-14 md:pt-12">
       {/* Headline */}
-      <h1 className="text-[clamp(2.6rem,9.5vh,8rem)] font-medium uppercase leading-[0.95] tracking-tight">
+      <h1 className="text-[clamp(2.1rem,11.5vw,8rem)] font-medium uppercase leading-[0.95] tracking-tight md:text-[clamp(3rem,9.5vh,8rem)]">
         Web Designer
         <br />
         & Developer
@@ -104,7 +104,7 @@ function Index() {
             <ArrowDownRight />
           </div>
         </div>
-        <h2 className="text-right text-[clamp(2.2rem,7.5vh,6rem)] font-medium uppercase leading-[0.95] tracking-tight">
+        <h2 className="text-right text-[clamp(1.9rem,9.5vw,6rem)] font-medium uppercase leading-[0.95] tracking-tight md:text-[clamp(2.4rem,7.5vh,6rem)]">
           Marmik
           <br />
           Soni
